@@ -1,3 +1,23 @@
+;;; purple-haze-theme.el --- an overtly purple color theme for Emacs24.
+;;; Author: Jason Milkins <jasonm23@gmail.com>
+;;; Url: https://github.com/jasonm23/emacs-purple-haze-theme
+;;; Version: 0.0.2
+;;;
+;;; This program is free software: you can redistribute it and/or modify
+;;; it under the terms of the GNU General Public License as published by
+;;; the Free Software Foundation, version 3 of the License.
+;;;
+;;; This file is distributed in the hope that it will be useful,
+;;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;;; GNU General Public License for more details.
+;;;
+;;; You should have received a copy of the GNU General Public License
+;;; along with GNU Emacs.
+;;;
+;;; This file is not a part of Emacs
+;;;
+
 (deftheme purple-haze
   "purple-haze By: Jasonm23 / Created 2013-FEB-16 .")
 
@@ -83,140 +103,71 @@
 
  ;; Hightlight
  '(highlight
-   ((((class color) (min-colors 88) (background light))
-     (:background "#503453"))
-    (((class color)
-      (min-colors 88)
-      (background dark))
-     (:background "#503450"))
-    (((class color) (min-colors 16)
-      (background light))
-     (:background "#503450"))
-    (((class color)
-      (min-colors 16)
-      (background dark))
-     (:background "#604560"))
-    (((class color)
-      (min-colors 8))
-     (:foreground "#000000" :background "#a0a0a0"))
-    (t (:inverse-video t))))
+   ((((class color) (min-colors 88) (background light)) (:background "#503453"))
+    (((class color) (min-colors 88) (background dark)) (:background "#503450")) 
+    (((class color) (min-colors 16) (background light)) (:background "#503450"))
+    (((class color) (min-colors 16) (background dark)) (:background "#604560"))
+    (((class color) (min-colors 8)) (:foreground "#000000" :background "#a0a0a0")) (t (:inverse-video t))))
 
  '(shadow
-   ((((class color grayscale)
-      (min-colors 88)
-      (background light))
-     (:foreground "#999999"))
-    (((class color grayscale)
-      (min-colors 88)
-      (background dark))
-     (:foreground "#999999"))
-    (((class color)
-      (min-colors 8)
-      (background light))
-     (:foreground "#a0a0a0"))
-    (((class color)
-      (min-colors 8)
-      (background dark))
-     (:foreground "#ba7aba"))))
+   ((((class color grayscale) (min-colors 88) (background light)) (:foreground "#999999"))
+    (((class color grayscale) (min-colors 88) (background dark)) (:foreground "#999999"))
+    (((class color) (min-colors 8) (background light)) (:foreground "#a0a0a0"))
+    (((class color) (min-colors 8) (background dark)) (:foreground "#ba7aba"))))
 
  '(trailing-whitespace
-   ((((class color)
-      (background light))
-     (:background "#ff0000"))
-    (((class color)
-      (background dark))
-     (:background "#ff0000")) (t (:inverse-video t))))
+   ((((class color) (background light)) (:background "#ff0000"))
+    (((class color) (background dark)) (:background "#ff0000")) (t (:inverse-video t))))
 
 
- '(link ((((class color) (min-colors 88)
-           (background light)) (:underline t :foreground "#f0b7f0")) (((class color)
-                                                                       (background light)) (:underline t :foreground "#a044a0")) (((class color) (min-colors 88)
-                                                                                                                                   (background dark))  (:underline t :foreground "#a069aa")) (((class color)
-                                                                                                                                                                                               (background dark))  (:underline t :foreground "#a069aa")) (t (:inherit (underline)))))
+ '(link (
+         (((class color) (min-colors 88) (background light)) (:underline t :foreground "#f0b7f0")) 
+         (((class color) (background light)) (:underline t :foreground "#a044a0")) 
+         (((class color) (min-colors 88) (background dark))  (:underline t :foreground "#a069aa")) 
+         (((class color) (background dark))  (:underline t :foreground "#a069aa")) (t (:inherit (underline)))))
 
- '(link-visited ((default (:inherit (link))) (((class color)
-                                               (background light)) (:inherit (link))) (((class color)
-                                                                                        (background dark)) (:inherit (link)))))
+ '(link-visited ((default (:inherit (link))) 
+                 (((class color) (background light)) (:inherit (link))) 
+                 (((class color) (background dark)) (:inherit (link)))))
 
  '(button ((t (:inherit (link)))))
 
  '(header-line ((default (:inherit (mode-line))) (((type tty)) (:underline t :inverse-video nil))
-                (((class color grayscale)
-                  (background light)) (:box nil :foreground "#222222" :background "#bbbbbb"))
-                (((class color grayscale)
-                  (background dark)) (:box nil :foreground "#bbbbbb" :background "#222222"))
-                (((class mono)
-                  (background light)) (:underline t :box nil :inverse-video nil :foreground "#000000" :background "#ffffff"))
-                (((class mono)
-                  (background dark)) (:underline t :box nil :inverse-video nil :foreground "#ffffff" :background "#000000"))))
+                (((class color grayscale) (background light)) (:box nil :foreground "#222222" :background "#bbbbbb"))
+                (((class color grayscale) (background dark)) (:box nil :foreground "#bbbbbb" :background "#222222"))
+                (((class mono) (background light)) (:underline t :box nil :inverse-video nil :foreground "#000000" :background "#ffffff"))
+                (((class mono) (background dark)) (:underline t :box nil :inverse-video nil :foreground "#ffffff" :background "#000000"))))
 
  '(tooltip ((default nil) (nil nil)))
 
  '(isearch
-   ((((class color) (min-colors 88)
-      (background light)) (:foreground "#ee99ee" :background "#444444"))
-    (((class color) (min-colors 88)
-      (background dark)) (:foreground "#514361" :background "##444444"))
+   ((((class color) (min-colors 88) (background light)) (:foreground "#ee99ee" :background "#444444"))
+    (((class color) (min-colors 88) (background dark)) (:foreground "#514361" :background "##444444"))
     (((class color) (min-colors 16)) (:foreground "#c088cc" :background "#444444"))
     (((class color) (min-colors 8)) (:foreground "#c088cc" :background "#444444")) (t (:inverse-video t))))
 
  '(isearch-fail
-   ((((class color)
-      (min-colors 88)
-      (background light))
-     (:background "#ffaaaa"))
-    (((class color)
-      (min-colors 88)
-      (background dark))
-     (:background "#880000"))
-    (((class color)
-      (min-colors 16))
-     (:background "#FF0000"))
-    (((class color)
-      (min-colors 8))
-     (:background "#FF0000"))
-    (((class color grayscale))
-     (:foreground "#888888")) (t (:inverse-video t))))
+   ((((class color) (min-colors 88) (background light)) (:background "#ffaaaa"))
+    (((class color) (min-colors 88) (background dark)) (:background "#880000"))
+    (((class color) (min-colors 16)) (:background "#FF0000"))
+    (((class color) (min-colors 8)) (:background "#FF0000"))
+    (((class color grayscale)) (:foreground "#888888")) (t (:inverse-video t))))
 
  '(lazy-highlight
-   ((((class color)
-      (min-colors 88)
-      (background light))
-     (:background "#8877dd"))
-    (((class color)
-      (min-colors 88)
-      (background dark))
-     (:background "#7777dd"))
-    (((class color)
-      (min-colors 16))
-     (:background "#444499"))
-    (((class color)
-      (min-colors 8))
-     (:background "#555599")) (t (:underline t))))
+   ((((class color) (min-colors 88) (background light)) (:background "#8877dd"))
+    (((class color) (min-colors 88) (background dark)) (:background "#7777dd"))
+    (((class color) (min-colors 16)) (:background "#444499")) 
+    (((class color) (min-colors 8)) (:background "#555599")) (t (:underline t))))
 
  '(match
-   ((((class color)
-      (min-colors 88)
-      (background light))
-     (:background "#c388cc"))
-    (((class color)
-      (min-colors 88)
-      (background dark))
-     (:background "#c388cc"))
-    (((class color)
-      (min-colors 8)
-      (background light))
-     (:foreground "#000000" :background "#339"))
-    (((class color)
-      (min-colors 8)
-      (background dark))
-     (:foreground "#ffffff" :background "#559")) (((type tty) (class mono)) (:inverse-video t)) (t (:background "#888888"))))
+   ((((class color) (min-colors 88) (background light)) (:background "#c388cc"))
+    (((class color) (min-colors 88) (background dark)) (:background "#c388cc"))
+    (((class color) (min-colors 8) (background light)) (:foreground "#000000" :background "#339"))
+    (((class color) (min-colors 8) (background dark)) (:foreground "#ffffff" :background "#559")) (((type tty) (class mono)) (:inverse-video t)) (t (:background "#888888"))))
 
- '(next-error
-   ((t (:inherit (region)))))
+ '(next-error ((t (:inherit (region)))))
 
- '(query-replace
-   ((t (:inherit (isearch)))))
+ '(query-replace ((t (:inherit (isearch)))))
 
  )
 
@@ -237,3 +188,5 @@
 (eval-after-load "rainbow-delimiters" '(purple-haze-rainbow-delim-set-face))
 
 (provide-theme 'purple-haze)
+
+;;; purple-haze-theme.el ends here
