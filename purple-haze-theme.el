@@ -1,225 +1,224 @@
 (deftheme purple-haze
   "purple-haze By: Jasonm23 / Created 2013-FEB-16 .")
 
-  (custom-theme-set-variables
-   'purple-haze
-   '(fringe-mode 6 nil (fringe))
-   '(linum-format " %7d ")
-   )
+(custom-theme-set-variables
+ 'purple-haze
+ '(fringe-mode 6 nil (fringe))
+ '(linum-format " %7d ")
+ )
 
-  (custom-theme-set-faces
-   'purple-haze
+(custom-theme-set-faces
+ 'purple-haze
 
-   '(default
-      ((t (:foreground "#ffffff" :background "#0d0a10" ))))
+ '(default
+    ((t (:foreground "#ffffff" :background "#120F14" ))))
 
-   '(fixed-pitch
-     ((t (:family "Monospace"))))
+ '(fixed-pitch
+   ((t (:family "Monospace"))))
 
-   '(variable-pitch
-     ((t (:family "Sans Serif"))))
+ '(variable-pitch
+   ((t (:family "Sans Serif"))))
 
-   '(escape-glyph ;; Things like  and other control chars.
-     ((t (:foreground "#FF6600" :background "#211d3c"))))
+ '(escape-glyph ;; Things like  and other control chars.
+   ((t (:foreground "#FF6600" :background "#211d3c"))))
 
-   ;; Line Numbers (linum-mode)
-   '(linum
+ ;; Line Numbers (linum-mode)
+ '(linum
+   ((t (:background "#151019" :foreground "#403047" :box nil :height 100))))
 
-     ((t (:background "#151019" :foreground "#403047" :box nil :height 100))))
+ ;; Margin Fringes
+ '(fringe
+   ((t ( :background "#201520" :Foreground "#506080" ))))
 
-   ;; Margin Fringes
-   '(fringe
-     ((t ( :background "#201526" :Foreground "#506080" ))))
+ ;; Mode-line / status line
+ '(mode-line
+   ((t (:background "#2b283d" :box nil :foreground "#8c86e4" :height 85))))
 
-   ;; Mode-line / status line
-   '(mode-line
-     ((t (:background "#2b283d" :box nil :foreground "#8c86e4" :height 85))))
+ '(mode-line-inactive
+   ((t (:weight light :box nil :background "#202339" :foreground "#000000" :inherit (mode-line)))))
+ '(mode-line-emphasis
+   ((t (:weight bold))))
 
-   '(mode-line-inactive
-     ((t (:weight light :box nil :background "#202339" :foreground "#000000" :inherit (mode-line)))))
-   '(mode-line-emphasis
-     ((t (:weight bold))))
+ '(mode-line-highlight
+   ((t (:box nil (t (:inherit (highlight)))))))
 
-   '(mode-line-highlight
-     ((t (:box nil (t (:inherit (highlight)))))))
+ '(mode-line-buffer-id
+   ((t (:weight bold :box nil))))
 
-   '(mode-line-buffer-id
-     ((t (:weight bold :box nil))))
+ ;; Cursor
+ '(cursor
+   ((t (:foreground "#ffffff" :background "orange"))))
 
-   ;; Cursor
-   '(cursor
-     ((t (:foreground "#ffffff" :background "orange"))))
+ ;; Minibuffer
+ '(minibuffer-prompt
+   ((t (:weight bold :foreground "#606a92"))))
 
-   ;; Minibuffer
-   '(minibuffer-prompt
-     ((t (:weight bold :foreground "#606a92"))))
+ '(minibuffer-message
+   ((t (:foreground "#ffffff"))))
 
-   '(minibuffer-message
-     ((t (:foreground "#ffffff"))))
+ ;; Region
+ '(region
+   ((t (:background "#1a101f"))))
 
-   ;; Region
-   '(region
-     ((t (:background "#1a101f"))))
+ ;; Secondary region
+ '(secondary-selection
+   ((((class color) (min-colors 88) (background dark)) (:background "#444083"))))
 
-   ;; Secondary region
-   '(secondary-selection
-     ((((class color) (min-colors 88) (background dark)) (:background "#444083"))))
+ ;; font-lock - syntax
+ '(font-lock-builtin-face              ((t (:foreground "#606590"))))
+ '(font-lock-comment-face              ((t (:foreground "#505f89"))))
+ '(font-lock-comment-delimiter-face    ((t (:foreground "#7078a2" ))))
+ '(font-lock-doc-face                  ((t (:inherit (font-lock-string-face)))))
+ '(font-lock-function-name-face        ((t (:foreground "#8083be"))))
+ '(font-lock-keyword-face              ((t (:foreground "#aa8da7"))))
+ '(font-lock-negation-char-face        ((t nil)))
+ '(font-lock-preprocessor-face         ((t (:inherit (font-lock-builtin-face)))))
+ '(font-lock-regexp-grouping-backslash ((t (:inherit (bold)))))
+ '(font-lock-regexp-grouping-construct ((t (:inherit (bold)))))
+ '(font-lock-string-face               ((t (:foreground "#a0adee"))))
+ '(font-lock-constant-face             ((t (:foreground "#9a99e7"))))
+ '(font-lock-type-face                 ((t (:foreground "#5f5e8a"))))
+ '(font-lock-variable-name-face        ((t (:foreground "#8e8eb8"))))
+ '(font-lock-warning-face              ((t (:weight bold :foreground "#FF0000"))))
 
-   ;; font-lock - syntax
-   '(font-lock-builtin-face              ((t (:foreground "#606590"))))
-   '(font-lock-comment-face              ((t (:foreground "#505f89"))))
-   '(font-lock-comment-delimiter-face    ((t (:foreground "#7078a2" ))))
-   '(font-lock-doc-face                  ((t (:inherit (font-lock-string-face)))))
-   '(font-lock-function-name-face        ((t (:foreground "#8083be"))))
-   '(font-lock-keyword-face              ((t (:foreground "#aa8da7"))))
-   '(font-lock-negation-char-face        ((t nil)))
-   '(font-lock-preprocessor-face         ((t (:inherit (font-lock-builtin-face)))))
-   '(font-lock-regexp-grouping-backslash ((t (:inherit (bold)))))
-   '(font-lock-regexp-grouping-construct ((t (:inherit (bold)))))
-   '(font-lock-string-face               ((t (:foreground "#a0adee"))))
-   '(font-lock-constant-face             ((t (:foreground "#9a99e7"))))
-   '(font-lock-type-face                 ((t (:foreground "#5f5e8a"))))
-   '(font-lock-variable-name-face        ((t (:foreground "#8e8eb8"))))
-   '(font-lock-warning-face              ((t (:weight bold :foreground "#FF0000"))))
+ ;; Hightlight
+ '(highlight
+   ((((class color) (min-colors 88) (background light))
+     (:background "#503453"))
+    (((class color)
+      (min-colors 88)
+      (background dark))
+     (:background "#503450"))
+    (((class color) (min-colors 16)
+      (background light))
+     (:background "#503450"))
+    (((class color)
+      (min-colors 16)
+      (background dark))
+     (:background "#604560"))
+    (((class color)
+      (min-colors 8))
+     (:foreground "#000000" :background "#a0a0a0"))
+    (t (:inverse-video t))))
 
-   ;; Hightlight
-   '(highlight
-     ((((class color) (min-colors 88) (background light))
-       (:background "#503453"))
-      (((class color)
-        (min-colors 88)
-        (background dark))
-       (:background "#503450"))
-      (((class color) (min-colors 16)
-        (background light))
-       (:background "#503450"))
-      (((class color)
-        (min-colors 16)
-        (background dark))
-       (:background "#604560"))
-      (((class color)
-        (min-colors 8))
-       (:foreground "#000000" :background "#a0a0a0"))
-      (t (:inverse-video t))))
+ '(shadow
+   ((((class color grayscale)
+      (min-colors 88)
+      (background light))
+     (:foreground "#999999"))
+    (((class color grayscale)
+      (min-colors 88)
+      (background dark))
+     (:foreground "#999999"))
+    (((class color)
+      (min-colors 8)
+      (background light))
+     (:foreground "#a0a0a0"))
+    (((class color)
+      (min-colors 8)
+      (background dark))
+     (:foreground "#ba7aba"))))
 
-   '(shadow
-     ((((class color grayscale)
-        (min-colors 88)
-        (background light))
-       (:foreground "#999999"))
-      (((class color grayscale)
-        (min-colors 88)
-        (background dark))
-       (:foreground "#999999"))
-      (((class color)
-        (min-colors 8)
-        (background light))
-       (:foreground "#a0a0a0"))
-      (((class color)
-        (min-colors 8)
-        (background dark))
-       (:foreground "#ba7aba"))))
-
-   '(trailing-whitespace
-     ((((class color)
-        (background light))
-       (:background "#ff0000"))
-      (((class color)
-        (background dark))
-       (:background "#ff0000")) (t (:inverse-video t))))
+ '(trailing-whitespace
+   ((((class color)
+      (background light))
+     (:background "#ff0000"))
+    (((class color)
+      (background dark))
+     (:background "#ff0000")) (t (:inverse-video t))))
 
 
-   '(link ((((class color) (min-colors 88)
-       (background light)) (:underline t :foreground "#f0b7f0")) (((class color)
-       (background light)) (:underline t :foreground "#a044a0")) (((class color) (min-colors 88)
-       (background dark))  (:underline t :foreground "#a069aa")) (((class color)
-       (background dark))  (:underline t :foreground "#a069aa")) (t (:inherit (underline)))))
+ '(link ((((class color) (min-colors 88)
+           (background light)) (:underline t :foreground "#f0b7f0")) (((class color)
+                                                                       (background light)) (:underline t :foreground "#a044a0")) (((class color) (min-colors 88)
+                                                                                                                                   (background dark))  (:underline t :foreground "#a069aa")) (((class color)
+                                                                                                                                                                                               (background dark))  (:underline t :foreground "#a069aa")) (t (:inherit (underline)))))
 
-   '(link-visited ((default (:inherit (link))) (((class color)
-       (background light)) (:inherit (link))) (((class color)
-       (background dark)) (:inherit (link)))))
+ '(link-visited ((default (:inherit (link))) (((class color)
+                                               (background light)) (:inherit (link))) (((class color)
+                                                                                        (background dark)) (:inherit (link)))))
 
-   '(button ((t (:inherit (link)))))
+ '(button ((t (:inherit (link)))))
 
-   '(header-line ((default (:inherit (mode-line))) (((type tty)) (:underline t :inverse-video nil))
-       (((class color grayscale)
-         (background light)) (:box nil :foreground "#222222" :background "#bbbbbb"))
-       (((class color grayscale)
-         (background dark)) (:box nil :foreground "#bbbbbb" :background "#222222"))
-       (((class mono)
-         (background light)) (:underline t :box nil :inverse-video nil :foreground "#000000" :background "#ffffff"))
-       (((class mono)
-         (background dark)) (:underline t :box nil :inverse-video nil :foreground "#ffffff" :background "#000000"))))
+ '(header-line ((default (:inherit (mode-line))) (((type tty)) (:underline t :inverse-video nil))
+                (((class color grayscale)
+                  (background light)) (:box nil :foreground "#222222" :background "#bbbbbb"))
+                (((class color grayscale)
+                  (background dark)) (:box nil :foreground "#bbbbbb" :background "#222222"))
+                (((class mono)
+                  (background light)) (:underline t :box nil :inverse-video nil :foreground "#000000" :background "#ffffff"))
+                (((class mono)
+                  (background dark)) (:underline t :box nil :inverse-video nil :foreground "#ffffff" :background "#000000"))))
 
-   '(tooltip ((default nil) (nil nil)))
+ '(tooltip ((default nil) (nil nil)))
 
-   '(isearch
-     ((((class color) (min-colors 88)
-        (background light)) (:foreground "#ee99ee" :background "#444444"))
-      (((class color) (min-colors 88)
-        (background dark)) (:foreground "#514361" :background "##444444"))
-      (((class color) (min-colors 16)) (:foreground "#c088cc" :background "#444444"))
-      (((class color) (min-colors 8)) (:foreground "#c088cc" :background "#444444")) (t (:inverse-video t))))
+ '(isearch
+   ((((class color) (min-colors 88)
+      (background light)) (:foreground "#ee99ee" :background "#444444"))
+    (((class color) (min-colors 88)
+      (background dark)) (:foreground "#514361" :background "##444444"))
+    (((class color) (min-colors 16)) (:foreground "#c088cc" :background "#444444"))
+    (((class color) (min-colors 8)) (:foreground "#c088cc" :background "#444444")) (t (:inverse-video t))))
 
-   '(isearch-fail
-     ((((class color)
-        (min-colors 88)
-        (background light))
-       (:background "#ffaaaa"))
-      (((class color)
-        (min-colors 88)
-        (background dark))
-       (:background "#880000"))
-      (((class color)
-        (min-colors 16))
-       (:background "#FF0000"))
-      (((class color)
-        (min-colors 8))
-       (:background "#FF0000"))
-      (((class color grayscale))
-       (:foreground "#888888")) (t (:inverse-video t))))
+ '(isearch-fail
+   ((((class color)
+      (min-colors 88)
+      (background light))
+     (:background "#ffaaaa"))
+    (((class color)
+      (min-colors 88)
+      (background dark))
+     (:background "#880000"))
+    (((class color)
+      (min-colors 16))
+     (:background "#FF0000"))
+    (((class color)
+      (min-colors 8))
+     (:background "#FF0000"))
+    (((class color grayscale))
+     (:foreground "#888888")) (t (:inverse-video t))))
 
-   '(lazy-highlight
-     ((((class color)
-        (min-colors 88)
-        (background light))
-       (:background "#8877dd"))
-      (((class color)
-        (min-colors 88)
-        (background dark))
-       (:background "#7777dd"))
-      (((class color)
-        (min-colors 16))
-       (:background "#444499"))
-      (((class color)
-        (min-colors 8))
-       (:background "#555599")) (t (:underline t))))
+ '(lazy-highlight
+   ((((class color)
+      (min-colors 88)
+      (background light))
+     (:background "#8877dd"))
+    (((class color)
+      (min-colors 88)
+      (background dark))
+     (:background "#7777dd"))
+    (((class color)
+      (min-colors 16))
+     (:background "#444499"))
+    (((class color)
+      (min-colors 8))
+     (:background "#555599")) (t (:underline t))))
 
-   '(match
-     ((((class color)
-        (min-colors 88)
-        (background light))
-       (:background "#c388cc"))
-      (((class color)
-        (min-colors 88)
-        (background dark))
-       (:background "#c388cc"))
-      (((class color)
-        (min-colors 8)
-        (background light))
-       (:foreground "#000000" :background "#339"))
-      (((class color)
-        (min-colors 8)
-        (background dark))
-       (:foreground "#ffffff" :background "#559")) (((type tty) (class mono)) (:inverse-video t)) (t (:background "#888888"))))
+ '(match
+   ((((class color)
+      (min-colors 88)
+      (background light))
+     (:background "#c388cc"))
+    (((class color)
+      (min-colors 88)
+      (background dark))
+     (:background "#c388cc"))
+    (((class color)
+      (min-colors 8)
+      (background light))
+     (:foreground "#000000" :background "#339"))
+    (((class color)
+      (min-colors 8)
+      (background dark))
+     (:foreground "#ffffff" :background "#559")) (((type tty) (class mono)) (:inverse-video t)) (t (:background "#888888"))))
 
-   '(next-error
-     ((t (:inherit (region)))))
+ '(next-error
+   ((t (:inherit (region)))))
 
-   '(query-replace
-     ((t (:inherit (isearch)))))
+ '(query-replace
+   ((t (:inherit (isearch)))))
 
-   )
+ )
 
 
 ;; Rainbow delimiters
