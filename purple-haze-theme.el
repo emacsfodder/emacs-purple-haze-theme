@@ -1,7 +1,8 @@
 ;;; purple-haze-theme.el --- an overtly purple color theme for Emacs24.
+;;;
 ;;; Author: Jason Milkins <jasonm23@gmail.com>
 ;;; Url: https://github.com/jasonm23/emacs-purple-haze-theme
-;;; Version: 0.0.2
+;;; Version: 0.0.3
 ;;;
 ;;; This program is free software: you can redistribute it and/or modify
 ;;; it under the terms of the GNU General Public License as published by
@@ -19,7 +20,7 @@
 ;;;
 
 (deftheme purple-haze
-  "purple-haze By: Jasonm23 / Created 2013-FEB-16 .")
+  "purple-haze-theme By: Jason Milkins - emacsfodder.github.com")
 
 (custom-theme-set-variables
  'purple-haze
@@ -31,7 +32,13 @@
  'purple-haze
 
  '(default
-    ((t (:foreground "#ffffff" :background "#120F14" ))))
+    (
+     (((class color) (min-colors 16777216)) (:foreground "#fff" :background "#120F14"))
+     (((class color) (min-colors 88))       (:foreground "#fff" :background "#000"))
+     (((class color) (min-colors 16))       (:foreground "#fff" :background "#000"))
+     (((class color) (min-colors 8))        (:foreground "#fff" :background "#000"))
+     )
+    )
 
  '(fixed-pitch
    ((t (:family "Monospace"))))
