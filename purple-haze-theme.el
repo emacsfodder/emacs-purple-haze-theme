@@ -2,7 +2,11 @@
 ;;;
 ;;; Author: Jason Milkins <jasonm23@gmail.com>
 ;;; Url: https://github.com/jasonm23/emacs-purple-haze-theme
-;;; Version: 0.0.3
+;;; Version: 0.0.4
+;;;
+;;; Changelog:
+;;; 0.0.4    : auto add to custom load path on init
+;;; 0.0.3    : initial public version
 ;;;
 ;;; This program is free software: you can redistribute it and/or modify
 ;;; it under the terms of the GNU General Public License as published by
