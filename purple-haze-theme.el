@@ -2,9 +2,10 @@
 ;;;
 ;;; Author: Jason Milkins <jasonm23@gmail.com>
 ;;; Url: https://github.com/jasonm23/emacs-purple-haze-theme
-;;; Version: 0.0.5
+;;; Version: 0.0.6
 ;;;
 ;;; Changelog:
+;;; 0.0.6    : changed powerline/main-line colors
 ;;; 0.0.5    : add support for powerline and main-line
 ;;; 0.0.4    : auto add to custom load path on init
 ;;; 0.0.3    : initial public version
@@ -29,9 +30,9 @@
 
 (custom-theme-set-variables
  'purple-haze
- '(main-line-color1 "#333333")
+ '(main-line-color1 "#191919")
  '(main-line-color2 "#111111")
- '(powerline-color1 "#333333")
+ '(powerline-color1 "#191919")
  '(powerline-color2 "#111111")
  '(fringe-mode 6 nil (fringe))
  '(linum-format " %7d ")
