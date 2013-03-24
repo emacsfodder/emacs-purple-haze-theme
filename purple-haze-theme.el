@@ -2,9 +2,10 @@
 ;;;
 ;;; Author: Jason Milkins <jasonm23@gmail.com>
 ;;; Url: https://github.com/jasonm23/emacs-purple-haze-theme
-;;; Version: 0.0.6
+;;; Version: 0.0.7
 ;;;
 ;;; Changelog:
+;;; 0.0.7    : switch on rainbow-mode when editing
 ;;; 0.0.6    : changed powerline/main-line colors
 ;;; 0.0.5    : add support for powerline and main-line
 ;;; 0.0.4    : auto add to custom load path on init
@@ -212,5 +213,9 @@
 
 
 (provide-theme 'purple-haze)
+
+;; Local Variables:
+;; eval: (when (fboundp 'rainbow-mode) (rainbow-mode +1))
+;; End:
 
 ;;; purple-haze-theme.el ends here
