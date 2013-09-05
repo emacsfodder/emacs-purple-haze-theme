@@ -2,10 +2,11 @@
 ;;
 ;; Author: Jason Milkins <jasonm23@gmail.com>
 ;; Url: https://github.com/jasonm23/emacs-purple-haze-theme
-;; Version: 20130905.2200
+;; Version: 20130905.2211
 ;; Package-Requires: ((emacs "24.0"))
 ;;
 ;;; Changelog:
+;; 20130905.2211 : Fix rainbow mode invoke
 ;; 20130905.2200 : Updated headers - fixed borkage
 ;;
 ;; 20130905.2140 : Add support for flymake, git-gutter, diff, magit and
@@ -247,7 +248,7 @@
 (provide-theme 'purple-haze)
 
 ;; Local Variables:
-;; rainbow-mode: t
+;; eval: (when (fboundp 'rainbow-mode) (rainbow-mode +1))
 ;; End:
 
 ;;; purple-haze-theme.el ends here
