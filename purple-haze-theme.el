@@ -2,13 +2,24 @@
 ;;;
 ;;; Author: Jason Milkins <jasonm23@gmail.com>
 ;;; Url: https://github.com/jasonm23/emacs-purple-haze-theme
-;;; Version: 0.0.7
+;;; Version: 20130905.2140
 ;;;
 ;;; Changelog:
+;;;
+;;; 20130905.2140 : Add support for flymake, git-gutter, diff, magit and
+;;;            compilation mode (implicitly *grep* buffers) Updated
+;;;            iSearch/Lazy Highlight/Match, also added error and warn
+;;;            as explicit face themes. Rainbow Delimiters also
+;;;            updated.
+;;;
 ;;; 0.0.7    : switch on rainbow-mode when editing
+;;;
 ;;; 0.0.6    : changed powerline/main-line colors
+;;;
 ;;; 0.0.5    : add support for powerline and main-line
+;;;
 ;;; 0.0.4    : auto add to custom load path on init
+;;;
 ;;; 0.0.3    : initial public version
 ;;;
 ;;; This program is free software: you can redistribute it and/or modify
@@ -56,7 +67,7 @@
    ((t (:family "Sans Serif"))))
 
  '(escape-glyph ;; Things like  and other control chars.
-   ((t (:foreground "#FF6600" :background "#211d3c"))))
+   ((t (:foreground "#d96e26" :background "#211d3c"))))
 
  ;; Line Numbers (linum-mode)
  '(linum
@@ -80,17 +91,36 @@
  '(mode-line-buffer-id ((t (:weight bold :box nil))))
 
  ;; Cursor
- '(cursor ((t (:foreground "#ffffff" :background "orange"))))
+ '(cursor ((t (:foreground "#ffffff" :background "#d96e26"))))
 
- '(error ((t (:foreground "#ffffff" :background "red"))))
- '(warning ((t (:foreground "#ffffff" :background "#FF6600"))))
+ '(error ((t (:foreground "#cc3333" ))))
+ '(warning ((t (:foreground "#d96e26"))))
 
 '(flymake-errline
-   ((t ( :underline "red"))))
+   ((t (:underline "#cc3333"))))
 '(flymake-infoline
    ((t (:underline "DarkGreen"))))
 '(flymake-warnline
    ((t (:underline "#FF6600"))))
+
+'(git-gutter:added
+  ((t (:foreground "#609f60" :bold t))))
+'(git-gutter:modified
+  ((t (:foreground "#E09aF0" :bold t))))
+'(git-gutter:deleted
+  ((t (:foreground "#cc3333" :bold t))))
+
+'(magit-item-highlight ((t (:foreground "white" :background "#514b6c"))))
+
+'(cua-rectangle ((t (:background "#514b6c"))))
+
+'(diff-added                                ((t (:background "#132013"))))
+'(diff-removed                              ((t (:background "#290a0a"))))
+'(diff-file-header                          ((t (:background "#362145"))))
+'(diff-context                              ((t (:foreground "#E0E4CC"))))
+'(diff-hunk-header                          ((t (:background "#242130"))))
+
+'(compilation-info  ((t (:foreground "#a09aF0"))))
 
  ;; Minibuffer
  '(minibuffer-prompt
@@ -127,16 +157,11 @@
  ;; Hightlight
  '(highlight
    ((((class color) (min-colors 88) (background light)) (:background "#503453"))
-    (((class color) (min-colors 88) (background dark)) (:background "#503450"))
-    (((class color) (min-colors 16) (background light)) (:background "#503450"))
-    (((class color) (min-colors 16) (background dark)) (:background "#604560"))
-    (((class color) (min-colors 8)) (:foreground "#000000" :background "#a0a0a0")) (t (:inverse-video t))))
+    (((class color) (min-colors 88) (background dark)) (:background "#503450"))))
 
  '(shadow
    ((((class color grayscale) (min-colors 88) (background light)) (:foreground "#999999"))
-    (((class color grayscale) (min-colors 88) (background dark)) (:foreground "#999999"))
-    (((class color) (min-colors 8) (background light)) (:foreground "#a0a0a0"))
-    (((class color) (min-colors 8) (background dark)) (:foreground "#ba7aba"))))
+    (((class color grayscale) (min-colors 88) (background dark)) (:foreground "#999999"))))
 
  '(trailing-whitespace
    ((((class color) (background light)) (:background "#ff0000"))
@@ -154,13 +179,7 @@
 
  '(button ((t (:inherit (link)))))
 
- '(header-line ((default (:inherit (mode-line))) (((type tty)) (:underline t :inverse-video nil))
-                (((class color grayscale) (background light)) (:box nil :foreground "#222222" :background "#bbbbbb"))
-                (((class color grayscale) (background dark)) (:box nil :foreground "#bbbbbb" :background "#222222"))
-                (((class mono) (background light)) (:underline t :box nil :inverse-video nil :foreground "#000000" :background "#ffffff"))
-                (((class mono) (background dark)) (:underline t :box nil :inverse-video nil :foreground "#ffffff" :background "#000000"))))
-
- '(tooltip ((default nil) (nil nil)))
+ '(tooltip ((t (:foreground "#FFFFFF"  :background "#5f5e8a" ))))
 
  '(isearch
    ((((class color) (min-colors 88) (background light)) (:foreground "white" :background "#5533AA"))
@@ -178,8 +197,8 @@
     (((class color) (min-colors 88) (background dark)) (:foreground "#CCCCCC" :background "#331144"))))
 
  '(match
-   ((((class color) (min-colors 88) (background light)) (:foreground "black" :background "#c388cc"))
-    (((class color) (min-colors 88) (background dark)) (:foreground "white"  :background "#c388cc"))
+   ((((class color) (min-colors 88) (background light)) (:foreground "black" :background "#5c2e7a"))
+    (((class color) (min-colors 88) (background dark)) (:foreground "white"  :background "#5c2e7a"))
     (((type tty) (class mono)) (:inverse-video t))
     (t (:background "#888888"))))
 
@@ -192,9 +211,9 @@
 ;; Rainbow delimiters
 (defun purple-haze-rainbow-delim-set-face ()
   (set-face-attribute 'rainbow-delimiters-depth-1-face   nil :foreground "#a9f" )
-  (set-face-attribute 'rainbow-delimiters-depth-2-face   nil :foreground "#a8d" )
-  (set-face-attribute 'rainbow-delimiters-depth-3-face   nil :foreground "#868" )
-  (set-face-attribute 'rainbow-delimiters-depth-4-face   nil :foreground "#646" )
+  (set-face-attribute 'rainbow-delimiters-depth-2-face   nil :foreground "#959" )
+  (set-face-attribute 'rainbow-delimiters-depth-3-face   nil :foreground "#749" )
+  (set-face-attribute 'rainbow-delimiters-depth-4-face   nil :foreground "#639" )
   (set-face-attribute 'rainbow-delimiters-depth-5-face   nil :foreground "#636" )
   (set-face-attribute 'rainbow-delimiters-depth-6-face   nil :foreground "#535" )
   (set-face-attribute 'rainbow-delimiters-depth-7-face   nil :foreground "#424" )
