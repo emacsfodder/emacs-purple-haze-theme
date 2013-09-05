@@ -122,7 +122,7 @@
  ;; Hightlight
  '(highlight
    ((((class color) (min-colors 88) (background light)) (:background "#503453"))
-    (((class color) (min-colors 88) (background dark)) (:background "#503450")) 
+    (((class color) (min-colors 88) (background dark)) (:background "#503450"))
     (((class color) (min-colors 16) (background light)) (:background "#503450"))
     (((class color) (min-colors 16) (background dark)) (:background "#604560"))
     (((class color) (min-colors 8)) (:foreground "#000000" :background "#a0a0a0")) (t (:inverse-video t))))
@@ -139,13 +139,13 @@
 
 
  '(link (
-         (((class color) (min-colors 88) (background light)) (:underline t :foreground "#f0b7f0")) 
-         (((class color) (background light)) (:underline t :foreground "#a044a0")) 
-         (((class color) (min-colors 88) (background dark))  (:underline t :foreground "#a069aa")) 
+         (((class color) (min-colors 88) (background light)) (:underline t :foreground "#f0b7f0"))
+         (((class color) (background light)) (:underline t :foreground "#a044a0"))
+         (((class color) (min-colors 88) (background dark))  (:underline t :foreground "#a069aa"))
          (((class color) (background dark))  (:underline t :foreground "#a069aa")) (t (:inherit (underline)))))
 
- '(link-visited ((default (:inherit (link))) 
-                 (((class color) (background light)) (:inherit (link))) 
+ '(link-visited ((default (:inherit (link)))
+                 (((class color) (background light)) (:inherit (link)))
                  (((class color) (background dark)) (:inherit (link)))))
 
  '(button ((t (:inherit (link)))))
@@ -159,29 +159,34 @@
  '(tooltip ((default nil) (nil nil)))
 
  '(isearch
-   ((((class color) (min-colors 88) (background light)) (:foreground "#ee99ee" :background "#444444"))
-    (((class color) (min-colors 88) (background dark)) (:foreground "#514361" :background "##444444"))
-    (((class color) (min-colors 16)) (:foreground "#c088cc" :background "#444444"))
-    (((class color) (min-colors 8)) (:foreground "#c088cc" :background "#444444")) (t (:inverse-video t))))
+   ((((class color) (min-colors 88) (background light)) (:foreground "#ee99ee" :background "#222222"))
+    (((class color) (min-colors 88) (background dark)) (:foreground "#514361" :background "##222222"))
+    (((class color) (min-colors 16)) (:foreground "#c088cc" :background "#222222"))
+    (((class color) (min-colors 8)) (:foreground "#c088cc" :background "#222222"))
+    (t (:inverse-video t))))
 
  '(isearch-fail
-   ((((class color) (min-colors 88) (background light)) (:background "#ffaaaa"))
-    (((class color) (min-colors 88) (background dark)) (:background "#880000"))
-    (((class color) (min-colors 16)) (:background "#FF0000"))
-    (((class color) (min-colors 8)) (:background "#FF0000"))
-    (((class color grayscale)) (:foreground "#888888")) (t (:inverse-video t))))
+   ((((class color) (min-colors 88) (background light)) (:foreground "#000000" :background "#ffaaaa"))
+    (((class color) (min-colors 88) (background dark)) (:foreground "#000000" :background "#880000"))
+    (((class color) (min-colors 16)) (:foreground "#000000" :background "#FF0000"))
+    (((class color) (min-colors 8)) (:foreground "#000000" :background "#FF0000"))
+    (((class color grayscale)) (:foreground "#888888"))
+    (t (:inverse-video t))))
 
  '(lazy-highlight
-   ((((class color) (min-colors 88) (background light)) (:background "#8877dd"))
-    (((class color) (min-colors 88) (background dark)) (:background "#7777dd"))
-    (((class color) (min-colors 16)) (:background "#444499")) 
-    (((class color) (min-colors 8)) (:background "#555599")) (t (:underline t))))
+   ((((class color) (min-colors 88) (background light)) (:foreground "#000000" :background "#8877dd"))
+    (((class color) (min-colors 88) (background dark)) (:foreground "#000000" :background "#7777dd"))
+    (((class color) (min-colors 16)) (:foreground "#000000" :background "#444499"))
+    (((class color) (min-colors 8)) (:foreground "#000000" :background "#555599"))
+    (t (:underline t))))
 
  '(match
-   ((((class color) (min-colors 88) (background light)) (:background "#c388cc"))
-    (((class color) (min-colors 88) (background dark)) (:background "#c388cc"))
+   ((((class color) (min-colors 88) (background light)) (:foreground "#000000" :background "#c388cc"))
+    (((class color) (min-colors 88) (background dark)) (:foreground "#000000"  :background "#c388cc"))
     (((class color) (min-colors 8) (background light)) (:foreground "#000000" :background "#339"))
-    (((class color) (min-colors 8) (background dark)) (:foreground "#ffffff" :background "#559")) (((type tty) (class mono)) (:inverse-video t)) (t (:background "#888888"))))
+    (((class color) (min-colors 8) (background dark)) (:foreground "#ffffff" :background "#559"))
+    (((type tty) (class mono)) (:inverse-video t))
+    (t (:background "#888888"))))
 
  '(next-error ((t (:inherit (region)))))
 
