@@ -72,23 +72,18 @@
 
  '(mode-line-inactive
    ((t (:weight light :box nil :background "#202339" :foreground "#000000" :inherit (mode-line)))))
- '(mode-line-emphasis
-   ((t (:weight bold))))
 
- '(mode-line-highlight
-   ((t (:box nil (t (:inherit (highlight)))))))
+ '(mode-line-emphasis ((t (:weight bold))))
 
- '(mode-line-buffer-id
-   ((t (:weight bold :box nil))))
+ '(mode-line-highlight ((t (:box nil (t (:inherit (highlight)))))))
+
+ '(mode-line-buffer-id ((t (:weight bold :box nil))))
 
  ;; Cursor
- '(cursor
-   ((t (:foreground "#ffffff" :background "orange"))))
+ '(cursor ((t (:foreground "#ffffff" :background "orange"))))
 
- '(error
-   ((t (:foreground "#ffffff" :background "red"))))
- '(warning
-   ((t (:foreground "#ffffff" :background "#FF6600"))))
+ '(error ((t (:foreground "#ffffff" :background "red"))))
+ '(warning ((t (:foreground "#ffffff" :background "#FF6600"))))
 
 '(flymake-errline
    ((t ( :underline "red"))))
@@ -106,7 +101,7 @@
 
  ;; Region
  '(region
-   ((t (:background "#1a101f"))))
+   ((t (:background "#1F102f"))))
 
  ;; Secondary region
  '(secondary-selection
@@ -147,7 +142,6 @@
    ((((class color) (background light)) (:background "#ff0000"))
     (((class color) (background dark)) (:background "#ff0000")) (t (:inverse-video t))))
 
-
  '(link (
          (((class color) (min-colors 88) (background light)) (:underline t :foreground "#f0b7f0"))
          (((class color) (background light)) (:underline t :foreground "#a044a0"))
@@ -169,8 +163,8 @@
  '(tooltip ((default nil) (nil nil)))
 
  '(isearch
-   ((((class color) (min-colors 88) (background light)) (:foreground "white" :background "#773377"))
-    (((class color) (min-colors 88) (background dark)) (:foreground "white" :background "#773377"))
+   ((((class color) (min-colors 88) (background light)) (:foreground "white" :background "#5533AA"))
+    (((class color) (min-colors 88) (background dark)) (:foreground "white" :background "#5533AA"))
     (t (:inverse-video t))))
 
  '(isearch-fail
@@ -180,8 +174,8 @@
     (t (:inverse-video t))))
 
  '(lazy-highlight
-   ((((class color) (min-colors 88) (background light)) (:foreground "white" :background "#441144"))
-    (((class color) (min-colors 88) (background dark)) (:foreground "black" :background "#441144"))
+   ((((class color) (min-colors 88) (background light)) (:foreground "white" :background "#331144"))
+    (((class color) (min-colors 88) (background dark)) (:foreground "#CCCCCC" :background "#331144"))))
 
  '(match
    ((((class color) (min-colors 88) (background light)) (:foreground "black" :background "#c388cc"))
@@ -207,7 +201,7 @@
   (set-face-attribute 'rainbow-delimiters-depth-7-face   nil :foreground "#424" )
   (set-face-attribute 'rainbow-delimiters-depth-8-face   nil :foreground "#646" )
   (set-face-attribute 'rainbow-delimiters-depth-9-face   nil :foreground "#979" )
-  (set-face-attribute 'rainbow-delimiters-unmatched-face nil :foreground "#600" ))
+  (set-face-attribute 'rainbow-delimiters-unmatched-face nil :foreground "#F00" ))
 
 (eval-after-load "rainbow-delimiters" '(purple-haze-rainbow-delim-set-face))
 
