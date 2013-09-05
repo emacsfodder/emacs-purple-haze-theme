@@ -1,49 +1,51 @@
 ;;; purple-haze-theme.el --- an overtly purple color theme for Emacs24.
-;;;
-;;; Author: Jason Milkins <jasonm23@gmail.com>
-;;; Url: https://github.com/jasonm23/emacs-purple-haze-theme
-;;; Version: 20130905.2140
-;;;
+;;
+;; Author: Jason Milkins <jasonm23@gmail.com>
+;; Url: https://github.com/jasonm23/emacs-purple-haze-theme
+;; Version: 20130905.2140
+;; Package-Requires: ((emacs "24.0"))
+;;
 ;;; Changelog:
-;;;
-;;; 20130905.2140 : Add support for flymake, git-gutter, diff, magit and
-;;;            compilation mode (implicitly *grep* buffers) Updated
-;;;            iSearch/Lazy Highlight/Match, also added error and warn
-;;;            as explicit face themes. Rainbow Delimiters also
-;;;            updated.
-;;;
-;;; 0.0.7    : switch on rainbow-mode when editing
-;;;
-;;; 0.0.6    : changed powerline/main-line colors
-;;;
-;;; 0.0.5    : add support for powerline and main-line
-;;;
-;;; 0.0.4    : auto add to custom load path on init
-;;;
-;;; 0.0.3    : initial public version
-;;;
-;;; This program is free software: you can redistribute it and/or modify
-;;; it under the terms of the GNU General Public License as published by
-;;; the Free Software Foundation, version 3 of the License.
-;;;
-;;; This file is distributed in the hope that it will be useful,
-;;; but WITHOUT ANY WARRANTY; without even the implied warranty of
-;;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-;;; GNU General Public License for more details.
-;;;
-;;; You should have received a copy of the GNU General Public License
-;;; along with GNU Emacs.
-;;;
-;;; This file is not a part of Emacs
-;;;
-;;; Package-Requires: ((emacs "24.0"))
-;;;
+;;
+;; 20130905.2140 : Add support for flymake, git-gutter, diff, magit and
+;;            compilation mode (implicitly *grep* buffers) Updated
+;;            iSearch/Lazy Highlight/Match, also added error and warn
+;;            as explicit face themes. Rainbow Delimiters also
+;;            updated.
+;;
+;; 0.0.7    : switch on rainbow-mode when editing
+;;
+;; 0.0.6    : changed powerline/main-line colors
+;;
+;; 0.0.5    : add support for powerline and main-line
+;;
+;; 0.0.4    : auto add to custom load path on init
+;;
+;; 0.0.3    : initial public version
+;;
+;; This program is free software: you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation, version 3 of the License.
+;;
+;; This file is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+;;
+;; You should have received a copy of the GNU General Public License
+;; along with GNU Emacs.
+;;
+;; This file is not a part of Emacs
+;;
+;;
 ;;; Commentary:
 ;;
 ;; Purple haze is an overtly purple theme, with support for flymake,
 ;; git-gutter, magit, diff, cua, isearch, font-lock and a little more.
 ;; Listening to All along the watchtower is not mandatory, although
 ;; the Jimi Hendrix version is recommended.
+
+;;; Code:
 
 (unless (>= 24 emacs-major-version)
   (error "purple-haze-theme requires Emacs 24 or later."))
@@ -77,7 +79,8 @@
  '(variable-pitch
    ((t (:family "Sans Serif"))))
 
- '(escape-glyph ;; Things like  and other control chars.
+ '(escape-glyph ;; Things like 
+ and other control chars.
    ((t (:foreground "#d96e26" :background "#211d3c"))))
 
  ;; Line Numbers (linum-mode)
