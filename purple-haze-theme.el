@@ -189,7 +189,6 @@
 
  )
 
-
 ;; Rainbow delimiters
 (defun purple-haze-rainbow-delim-set-face ()
   (set-face-attribute 'rainbow-delimiters-depth-1-face   nil :foreground "#a9f" )
