@@ -46,8 +46,6 @@
     (
      (((class color) (min-colors 16777216)) (:foreground "#fff" :background "#120F14"))
      (((class color) (min-colors 88))       (:foreground "#fff" :background "#000"))
-     (((class color) (min-colors 16))       (:foreground "#fff" :background "#000"))
-     (((class color) (min-colors 8))        (:foreground "#fff" :background "#000"))
      )
     )
 
@@ -86,6 +84,18 @@
  ;; Cursor
  '(cursor
    ((t (:foreground "#ffffff" :background "orange"))))
+
+ '(error
+   ((t (:foreground "#ffffff" :background "red"))))
+ '(warning
+   ((t (:foreground "#ffffff" :background "#FF6600"))))
+
+'(flymake-errline
+   ((t ( :underline "red"))))
+'(flymake-infoline
+   ((t (:underline "DarkGreen"))))
+'(flymake-warnline
+   ((t (:underline "#FF6600"))))
 
  ;; Minibuffer
  '(minibuffer-prompt
@@ -159,32 +169,23 @@
  '(tooltip ((default nil) (nil nil)))
 
  '(isearch
-   ((((class color) (min-colors 88) (background light)) (:foreground "#ee99ee" :background "#222222"))
-    (((class color) (min-colors 88) (background dark)) (:foreground "#514361" :background "##222222"))
-    (((class color) (min-colors 16)) (:foreground "#c088cc" :background "#222222"))
-    (((class color) (min-colors 8)) (:foreground "#c088cc" :background "#222222"))
+   ((((class color) (min-colors 88) (background light)) (:foreground "white" :background "#773377"))
+    (((class color) (min-colors 88) (background dark)) (:foreground "white" :background "#773377"))
     (t (:inverse-video t))))
 
  '(isearch-fail
    ((((class color) (min-colors 88) (background light)) (:foreground "#000000" :background "#ffaaaa"))
     (((class color) (min-colors 88) (background dark)) (:foreground "#000000" :background "#880000"))
-    (((class color) (min-colors 16)) (:foreground "#000000" :background "#FF0000"))
-    (((class color) (min-colors 8)) (:foreground "#000000" :background "#FF0000"))
     (((class color grayscale)) (:foreground "#888888"))
     (t (:inverse-video t))))
 
  '(lazy-highlight
-   ((((class color) (min-colors 88) (background light)) (:foreground "#000000" :background "#8877dd"))
-    (((class color) (min-colors 88) (background dark)) (:foreground "#000000" :background "#7777dd"))
-    (((class color) (min-colors 16)) (:foreground "#000000" :background "#444499"))
-    (((class color) (min-colors 8)) (:foreground "#000000" :background "#555599"))
-    (t (:underline t))))
+   ((((class color) (min-colors 88) (background light)) (:foreground "white" :background "#441144"))
+    (((class color) (min-colors 88) (background dark)) (:foreground "black" :background "#441144"))
 
  '(match
-   ((((class color) (min-colors 88) (background light)) (:foreground "#000000" :background "#c388cc"))
-    (((class color) (min-colors 88) (background dark)) (:foreground "#000000"  :background "#c388cc"))
-    (((class color) (min-colors 8) (background light)) (:foreground "#000000" :background "#339"))
-    (((class color) (min-colors 8) (background dark)) (:foreground "#ffffff" :background "#559"))
+   ((((class color) (min-colors 88) (background light)) (:foreground "black" :background "#c388cc"))
+    (((class color) (min-colors 88) (background dark)) (:foreground "white"  :background "#c388cc"))
     (((type tty) (class mono)) (:inverse-video t))
     (t (:background "#888888"))))
 
