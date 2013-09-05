@@ -36,6 +36,17 @@
 ;;;
 ;;; This file is not a part of Emacs
 ;;;
+;;; Package-Requires: ((emacs "24.0"))
+;;;
+;;; Commentary:
+;;
+;; Purple haze is an overtly purple theme, with support for flymake,
+;; git-gutter, magit, diff, cua, isearch, font-lock and a little more.
+;; Listening to All along the watchtower is not mandatory, although
+;; the Jimi Hendrix version is recommended.
+
+(unless (>= 24 emacs-major-version)
+  (error "purple-haze-theme requires Emacs 24 or later."))
 
 (deftheme purple-haze
   "purple-haze-theme By: Jason Milkins - emacsfodder.github.com")
