@@ -2,10 +2,11 @@
 ;;
 ;; Author: Jason Milkins <jasonm23@gmail.com>
 ;; Url: https://github.com/jasonm23/emacs-purple-haze-theme
-;; Version: 20130905.2140
+;; Version: 20130905.2200
 ;; Package-Requires: ((emacs "24.0"))
 ;;
 ;;; Changelog:
+;; 20130905.2200 : Updated headers - fixed borkage
 ;;
 ;; 20130905.2140 : Add support for flymake, git-gutter, diff, magit and
 ;;            compilation mode (implicitly *grep* buffers) Updated
@@ -79,8 +80,7 @@
  '(variable-pitch
    ((t (:family "Sans Serif"))))
 
- '(escape-glyph ;; Things like 
- and other control chars.
+ '(escape-glyph ;; Things like  and other control chars.
    ((t (:foreground "#d96e26" :background "#211d3c"))))
 
  ;; Line Numbers (linum-mode)
@@ -247,7 +247,7 @@
 (provide-theme 'purple-haze)
 
 ;; Local Variables:
-;; eval: (when (fboundp 'rainbow-mode) (rainbow-mode +1))
+;; rainbow-mode: t
 ;; End:
 
 ;;; purple-haze-theme.el ends here
