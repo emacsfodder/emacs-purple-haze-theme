@@ -112,11 +112,11 @@
  '(warning ((t (:foreground "#d96e26"))))
 
 '(flymake-errline
-   ((t (:underline "#cc3333"))))
+   ((t (:underline "#cc3333" :foreground nil :background nil ))))
 '(flymake-infoline
-   ((t (:underline "DarkGreen"))))
+   ((t (:underline "DarkGreen" :foreground nil :background nil))))
 '(flymake-warnline
-   ((t (:underline "#FF6600"))))
+   ((t (:underline "#FF6600" :foreground nil :background nil))))
 
 '(git-gutter:added
   ((t (:foreground "#609f60" :bold t))))
