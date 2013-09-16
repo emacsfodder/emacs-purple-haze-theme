@@ -86,7 +86,10 @@
 
  ;; Line Numbers (linum-mode)
  '(linum
-   ((t (:background "#151019" :foreground "#403047" :box nil :height 100))))
+   (
+    (((class color) (min-colors 16777216)) (:background "#151019" :foreground "#403047" :box nil :height 100))
+    (((class color) (min-colors 88))       (:background "#202020" :foreground "#505f89" :box nil :height 100)))
+   )
 
  ;; Margin Fringes
  '(fringe
