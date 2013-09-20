@@ -2,11 +2,15 @@
 ;;
 ;; Author: Jason Milkins <jasonm23@gmail.com>
 ;; Url: https://github.com/jasonm23/emacs-purple-haze-theme
-;; Version: 20130905.2211
+;; Version: 20130906.1159
 ;; Package-Requires: ((emacs "24.0"))
 ;;
+
 ;;; Changelog:
+;; 20130906.1159 : Fix commentary block
+;;
 ;; 20130905.2211 : Fix rainbow mode invoke
+;;
 ;; 20130905.2200 : Updated headers - fixed borkage
 ;;
 ;; 20130905.2140 : Add support for flymake, git-gutter, diff, magit and
@@ -38,16 +42,13 @@
 ;; along with GNU Emacs.
 ;;
 ;; This file is not a part of Emacs
-;;
-;;
+
 ;;; Commentary:
 ;;
 ;; Purple haze is an overtly purple theme, with support for flymake,
 ;; git-gutter, magit, diff, cua, isearch, font-lock and a little more.
 ;; Listening to All along the watchtower is not mandatory, although
 ;; the Jimi Hendrix version is recommended.
-
-;;; Code:
 
 (unless (>= 24 emacs-major-version)
   (error "purple-haze-theme requires Emacs 24 or later."))
@@ -70,8 +71,8 @@
 
  '(default
     (
-     (((class color) (min-colors 16777216)) (:foreground "#fff" :background "#120F14"))
      (((class color) (min-colors 88))       (:foreground "#fff" :background "#000"))
+     (t (:foreground "#fff" :background "#120F14"))
      )
     )
 
@@ -86,18 +87,26 @@
 
  ;; Line Numbers (linum-mode)
  '(linum
-   ((t (:background "#151019" :foreground "#403047" :box nil :height 100))))
+   (
+    (((class color) (min-colors 88))  (:background "#000000" :foreground "#403047"))
+    (t (:background "#151019" :foreground "#403047" :box nil :height 100))))
 
  ;; Margin Fringes
  '(fringe
-   ((t ( :background "#201520" :Foreground "#506080" ))))
+   (
+   (((class color) (min-colors 88))  (:background "#111111" :foreground "#506080"))
+   (t ( :background "#201520" :Foreground "#506080" ))))
 
  ;; Mode-line / status line
  '(mode-line
-   ((t (:background "#2b283d" :box nil :foreground "#8c86e4" :height 85))))
+   (
+    (((class color) (min-colors 88))  (:background "#222222" :foreground "#8c86e4"))
+    (t (:background "#2b283d" :box nil :foreground "#8c86e4" :height 85))))
 
  '(mode-line-inactive
-   ((t (:weight light :box nil :background "#202339" :foreground "#000000" :inherit (mode-line)))))
+   (
+    (((class color) (min-colors 88))  (:background "#111111" :foreground "#000000"))
+    (t (:weight light :box nil :background "#202339" :foreground "#000000" :inherit (mode-line)))))
 
  '(mode-line-emphasis ((t (:weight bold))))
 
@@ -227,13 +236,13 @@
 (defun purple-haze-rainbow-delim-set-face ()
   (set-face-attribute 'rainbow-delimiters-depth-1-face   nil :foreground "#a9f" )
   (set-face-attribute 'rainbow-delimiters-depth-2-face   nil :foreground "#959" )
-  (set-face-attribute 'rainbow-delimiters-depth-3-face   nil :foreground "#749" )
+  (set-face-attribute 'rainbow-delimiters-depth-3-face   nil :foreground "#535" )
   (set-face-attribute 'rainbow-delimiters-depth-4-face   nil :foreground "#639" )
   (set-face-attribute 'rainbow-delimiters-depth-5-face   nil :foreground "#636" )
-  (set-face-attribute 'rainbow-delimiters-depth-6-face   nil :foreground "#535" )
+  (set-face-attribute 'rainbow-delimiters-depth-6-face   nil :foreground "#639" )
   (set-face-attribute 'rainbow-delimiters-depth-7-face   nil :foreground "#424" )
   (set-face-attribute 'rainbow-delimiters-depth-8-face   nil :foreground "#646" )
-  (set-face-attribute 'rainbow-delimiters-depth-9-face   nil :foreground "#979" )
+  (set-face-attribute 'rainbow-delimiters-depth-9-face   nil :foreground "#919" )
   (set-face-attribute 'rainbow-delimiters-unmatched-face nil :foreground "#F00" ))
 
 (eval-after-load "rainbow-delimiters" '(purple-haze-rainbow-delim-set-face))
