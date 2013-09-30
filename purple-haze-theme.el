@@ -1,12 +1,13 @@
 ;;; purple-haze-theme.el --- an overtly purple color theme for Emacs24.
 ;;
-;; Author: Jason Milkins <jasonm23@gmail.com>
-;; Url: https://github.com/jasonm23/emacs-purple-haze-theme
-;; Version: 20130906.1159
-;; Package-Requires: ((emacs "24.0"))
-;;
+;;; Author: Jason Milkins <jasonm23@gmail.com>
+;;; Url: https://github.com/jasonm23/emacs-purple-haze-theme
+;;; Version: 20130930.0036
+;;; Package-Requires: ((emacs "24.0"))
 
 ;;; Changelog:
+;; 20130930.0036 : Bug fix
+;;
 ;; 20130906.1159 : Fix commentary block
 ;;
 ;; 20130905.2211 : Fix rainbow mode invoke
@@ -28,7 +29,8 @@
 ;; 0.0.4    : auto add to custom load path on init
 ;;
 ;; 0.0.3    : initial public version
-;;
+
+;;; Licence:
 ;; This program is free software: you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
 ;; the Free Software Foundation, version 3 of the License.
@@ -44,7 +46,6 @@
 ;; This file is not a part of Emacs
 
 ;;; Commentary:
-;;
 ;; Purple haze is an overtly purple theme, with support for flymake,
 ;; git-gutter, magit, diff, cua, isearch, font-lock and a little more.
 ;; Listening to All along the watchtower is not mandatory, although
@@ -82,7 +83,7 @@
  '(variable-pitch
    ((t (:family "Sans Serif"))))
 
- '(escape-glyph ;; Things like  and other control chars.
+ '(escape-glyph ;; Things like ^[ or other control chars.
    ((t (:foreground "#d96e26" :background "#211d3c"))))
 
  ;; Line Numbers (linum-mode)
