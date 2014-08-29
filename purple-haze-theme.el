@@ -2,10 +2,15 @@
 ;;
 ;;; Author: Jason Milkins <jasonm23@gmail.com>
 ;;; Url: https://github.com/jasonm23/emacs-purple-haze-theme
-;;; Version: 20130930.0036
+;;; Version: 20140829.0951
 ;;; Package-Requires: ((emacs "24.0"))
-
+;;
 ;;; Changelog:
+;; 20140829.0951 : Fix terminal background and turn off text height
+;;                 changes (linum and modeline). Emphasised diff
+;;                 background colors a little. Added support for
+;;                 diff-refine and diff-change faces.
+;;
 ;; 20130930.0036 : Bug fix
 ;;
 ;; 20130906.1159 : Fix commentary block
@@ -15,10 +20,10 @@
 ;; 20130905.2200 : Updated headers - fixed borkage
 ;;
 ;; 20130905.2140 : Add support for flymake, git-gutter, diff, magit and
-;;            compilation mode (implicitly *grep* buffers) Updated
-;;            iSearch/Lazy Highlight/Match, also added error and warn
-;;            as explicit face themes. Rainbow Delimiters also
-;;            updated.
+;;                compilation mode (implicitly *grep* buffers) Updated
+;;                iSearch/Lazy Highlight/Match, also added error and warn
+;;                as explicit face themes. Rainbow Delimiters also
+;;                updated.
 ;;
 ;; 0.0.7    : switch on rainbow-mode when editing
 ;;
@@ -29,7 +34,7 @@
 ;; 0.0.4    : auto add to custom load path on init
 ;;
 ;; 0.0.3    : initial public version
-
+;;
 ;;; Licence:
 ;; This program is free software: you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -44,12 +49,14 @@
 ;; along with GNU Emacs.
 ;;
 ;; This file is not a part of Emacs
-
+;;
 ;;; Commentary:
 ;; Purple haze is an overtly purple theme, with support for flymake,
 ;; git-gutter, magit, diff, cua, isearch, font-lock and a little more.
 ;; Listening to All along the watchtower is not mandatory, although
-;; the Jimi Hendrix version is recommended.
+;; the Jimi Hendrix version is recommended.  (Sorry Dylan fans.)
+;;
+;;; Code:
 
 (unless (>= 24 emacs-major-version)
   (error "purple-haze-theme requires Emacs 24 or later."))
@@ -59,10 +66,6 @@
 
 (custom-theme-set-variables
  'purple-haze
- '(main-line-color1 "#191919")
- '(main-line-color2 "#111111")
- '(powerline-color1 "#191919")
- '(powerline-color2 "#111111")
  '(fringe-mode 6 nil (fringe))
  '(linum-format " %7d ")
  )
@@ -71,11 +74,10 @@
  'purple-haze
 
  '(default
-    (
-     (((class color) (min-colors 88))       (:foreground "#fff" :background "#000"))
-     (t (:foreground "#fff" :background "#120F14"))
-     )
-    )
+   ((((class color) (min-colors 16777216)) (:foreground "#fff" :background "#120F14"))
+    (((class color) (min-colors 88))       (:foreground "#fff" :background "#000"))
+    (((class color) (min-colors 16))       (:foreground "#fff" :background "#000"))
+    (((class color) (min-colors 8))        (:foreground "#fff" :background "#000"))))
 
  '(fixed-pitch
    ((t (:family "Monospace"))))
@@ -90,7 +92,7 @@
  '(linum
    (
     (((class color) (min-colors 88))  (:background "#000000" :foreground "#403047"))
-    (t (:background "#151019" :foreground "#403047" :box nil :height 100))))
+    (t (:background "#151019" :foreground "#403047" :box nil ))))
 
  ;; Margin Fringes
  '(fringe
@@ -102,7 +104,7 @@
  '(mode-line
    (
     (((class color) (min-colors 88))  (:background "#222222" :foreground "#8c86e4"))
-    (t (:background "#2b283d" :box nil :foreground "#8c86e4" :height 85))))
+    (t (:background "#2b283d" :box nil :foreground "#8c86e4" ))))
 
  '(mode-line-inactive
    (
@@ -118,7 +120,7 @@
  ;; Cursor
  '(cursor ((t (:foreground "#ffffff" :background "#d96e26"))))
 
- '(error ((t (:foreground "#cc3333" ))))
+ '(error   ((t (:foreground "#cc3333" ))))
  '(warning ((t (:foreground "#d96e26"))))
 
 '(flymake-errline
@@ -139,8 +141,11 @@
 
 '(cua-rectangle ((t (:background "#514b6c"))))
 
-'(diff-added                                ((t (:background "#132013"))))
-'(diff-removed                              ((t (:background "#290a0a"))))
+'(diff-added                                ((t (:background "#033003"))))
+'(diff-changed                              ((t (:background "#661279"))))
+'(diff-refine-added                         ((t (:background "#035003"))))
+'(diff-removed                              ((t (:background "#3f0303"))))
+'(diff-refine-removed                       ((t (:background "#500303"))))
 '(diff-file-header                          ((t (:background "#362145"))))
 '(diff-context                              ((t (:foreground "#E0E4CC"))))
 '(diff-hunk-header                          ((t (:background "#242130"))))
