@@ -58,7 +58,7 @@
 ;;
 ;;; Code:
 
-(unless (>= 24 emacs-major-version)
+(unless (>= emacs-major-version 24)
   (error "purple-haze-theme requires Emacs 24 or later."))
 
 (deftheme purple-haze
